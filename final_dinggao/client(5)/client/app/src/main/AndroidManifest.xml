@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.client">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <application
+        android:name=".utils.ApplicationUtil"
+        android:allowBackup="true"
+        android:icon="@drawable/tubiao"
+        android:label="校园足球"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:replace="android:label"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+
+        <activity android:name=".activity.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.ManageGameActivity" />
+        <activity android:name=".activity.UserShowOneGameActivity" />
+        <activity android:name=".activity.UserShowOneActivity" />
+        <activity android:name=".activity.RecordGameActivity" />
+        <activity android:name=".activity.NewGame1Activity" />
+        <activity android:name=".activity.NewGameActivity" />
+        <!--        <activity android:name=".activity.RecordGameActivity" android:theme="@style/Theme.MaterialComponents.DayNight"/>-->
+        <!--        <activity android:name=".activity.NewGame1Activity" android:theme="@style/Theme.MaterialComponents.DayNight" />-->
+        <!--        <activity android:name=".activity.ManageGameActivity" android:theme="@style/Theme.MaterialComponents.DayNight"/>-->
+        <!--        <activity android:name=".activity.AudienceAllGameActivity" android:theme="@style/Theme.MaterialComponents.DayNight"/>-->
+        <!--        <activity android:name=".activity.ManagerAllGameActivity" android:theme="@style/Theme.MaterialComponents.DayNight"/>-->
+        <activity android:name=".activity.AudienceAllGameActivity"/>
+        <activity android:name=".activity.ManagerAllGameActivity"/>
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.FaceActivity" />
+        <activity android:name=".activity.Face1Activity" />
+        <activity android:name=".activity.AudienceMainActivity" />
+        <activity android:name=".activity.FeedBackActivity" />
+        <activity android:name=".activity.ChangePasswordActivity" />
+        <activity android:name=".activity.ChangeNameActivity" />
+        <activity android:name=".activity.AboutUsActivity" />
+        <activity android:name=".activity.MyActivity" />
+        <activity android:name=".activity.ShowNewsActivity" >
+        </activity>
+        <activity
+            android:name=".io.agora.openlive.activities.BroadcastActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".io.agora.openlive.activities.LiveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".io.agora.openlive.activities.RoleActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".io.agora.openlive.activities.SettingsActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

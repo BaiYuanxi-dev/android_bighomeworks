@@ -1,0 +1,79 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '29.0.2'
+
+    defaultConfig {
+        applicationId "com.example.client"
+        minSdkVersion 29
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        dataBinding = true
+    }
+}
+
+dependencies {
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.jude:rollviewpager:1.2.9'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'junit:junit:4.12'
+    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+
+
+
+    //图片轮播框架
+    implementation 'com.youth.banner:banner:1.4.9'
+    //底部菜单栏依赖
+    implementation 'com.google.android.material:material:1.2.0'
+    //cardview依赖
+    implementation 'androidx.cardview:cardview:1.0.0'
+    //glide，比较好的版本，Matisse版本，配合glide3.7.0，因为后面的glide版本没有了asbitmap等方法
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+
+
+    //分包
+    implementation 'androidx.multidex:multidex:2.0.0'
+
+
+    implementation 'com.github.agorabuilder:native-full-sdk:3.6.0'
+
+    //底部菜单栏依赖
+    implementation 'com.google.android.material:material:1.2.0'
+    //输入框依赖性
+    implementation 'com.github.HITGIF:TextFieldBoxes:1.0.1'
+    //下拉框依赖
+    implementation 'com.github.arcadefire:nice-spinner:1.4.4'
+
+
+    //人脸识别
+    implementation group: 'com.tencentcloudapi', name: 'tencentcloud-sdk-java-common', version: '3.1.416'
+    implementation group: 'com.tencentcloudapi', name: 'tencentcloud-sdk-java-iai', version: '3.1.416'
+    implementation 'xerces:xercesImpl:2.11.0'
+    implementation group: 'com.alibaba', name: 'fastjson', version: '1.2.78'
+
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mirror_modes">
+        <item>Auto</item>
+        <item>Enabled</item>
+        <item>Disabled</item>
+    </string-array>
+
+    <string-array name="process_bar_elements">
+        <item>比赛信息</item>
+        <item>球队信息</item>
+        <item>选择模式</item>
+    </string-array>
+
+    <dimen name="text_size_selected">14sp</dimen>
+    <dimen name="text_size_unselected">12sp</dimen>
+</resources>
+

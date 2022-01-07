@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraintlayout"
+    tools:context=".activity.RecordGameActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="2dp">
+
+        <LinearLayout
+            android:layout_width="375dp"
+            android:layout_height="52dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.516"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.885">
+
+            <Button
+                android:id="@+id/btn_check"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/darkgray"
+                android:text="验证"
+                android:textColor="@color/gray" />
+
+            <Button
+                android:id="@+id/btn_begin"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/darkgray"
+                android:text="开赛"
+                android:textColor="@color/gray" />
+
+            <Button
+                android:id="@+id/btn_break"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/darkgray"
+                android:text="暂停"
+                android:textColor="@color/gray" />
+
+            <Button
+                android:id="@+id/btn_end"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/darkgray"
+                android:text="结束"
+                android:textColor="@color/gray" />
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="170dp"
+        android:text="为该球队添加事件："
+        android:textColor="#D10000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:srcCompat="@drawable/green_square" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:srcCompat="@drawable/yellow_square" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:srcCompat="@drawable/red_square" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:srcCompat="@drawable/black_square" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView8"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8"
+        app:srcCompat="@drawable/purple_square" />
+
+    <TextView
+        android:id="@+id/green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:onClick="mybuttonlistener"
+        android:text="进球"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <TextView
+        android:id="@+id/yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:onClick="mybuttonlistener"
+        android:text="黄牌警告"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="@+id/imageView6"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:onClick="mybuttonlistener"
+        android:text="红牌罚下"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintTop_toTopOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:onClick="mybuttonlistener"
+        android:text="点球"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintStart_toEndOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/purple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:onClick="mybuttonlistener"
+        android:text="换人"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toTopOf="@+id/imageView10"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Chronometer
+        android:id="@+id/timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="34sp"
+        android:textColor="#E6979797"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="70dp"
+        android:background="#dfdfdf"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="2dp" />
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="小组赛第一场"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="550dp"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <ImageView
+        android:id="@+id/imageViewRed"
+        android:layout_width="250dp"
+        android:layout_height="90dp"
+        android:layout_marginRight="190dp"
+        android:layout_marginBottom="420dp"
+        android:elevation="5dp"
+        android:onClick="mybuttonlistener"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:srcCompat="@drawable/red" />
+    <TextView
+        android:id="@+id/textViewTeamRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:text="软件学院"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@+id/imageViewRed"
+        app:layout_constraintTop_toTopOf="@+id/imageViewRed" />
+
+    <TextView
+        android:id="@+id/textViewRedGreenNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="55dp"
+        android:elevation="20dp"
+        android:text="3"
+        android:textColor="#FFC3C3"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/imageViewRed"
+        app:layout_constraintTop_toTopOf="@+id/imageViewRed"
+        />
+    <ImageView
+        android:id="@+id/ImageViewRedGreen"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="2dp"
+        android:elevation="20dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewRedGreenNum"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewRedGreenNum"
+        app:srcCompat="@drawable/green_rec"
+        />
+
+    <TextView
+        android:id="@+id/textViewRedYellowNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:elevation="20dp"
+        android:text="1"
+        android:textColor="#FFC3C3"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/ImageViewRedGreen"
+        app:layout_constraintBottom_toBottomOf="@+id/ImageViewRedGreen"
+        />
+    <ImageView
+        android:id="@+id/ImageViewRedYellow"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="2dp"
+        android:elevation="20dp"
+        android:padding="2.5dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewRedYellowNum"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewRedYellowNum"
+        app:srcCompat="@drawable/yellow_rec"
+        />
+    <TextView
+        android:id="@+id/textViewRedRedNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:elevation="20dp"
+        android:text="0"
+        android:textColor="#FFC3C3"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/ImageViewRedYellow"
+        app:layout_constraintBottom_toBottomOf="@+id/ImageViewRedYellow"
+        />
+    <ImageView
+        android:id="@+id/ImageViewRedRed"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="2dp"
+        android:elevation="20dp"
+        android:padding="2.5dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewRedRedNum"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewRedRedNum"
+        app:srcCompat="@drawable/red_rec"
+        />
+    <ImageView
+        android:id="@+id/imageViewBlue"
+        android:layout_width="250dp"
+        android:layout_height="90dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginBottom="390dp"
+        android:onClick="mybuttonlistener"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:srcCompat="@drawable/blue" />
+    <TextView
+        android:id="@+id/textViewTeamBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:text="计算机学院"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewBlue"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBlue" />
+
+    <TextView
+        android:id="@+id/textViewBlueGreenNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="155dp"
+        android:layout_marginTop="55dp"
+        android:elevation="20dp"
+        android:text="0"
+        android:textColor="#CCDEF8"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewBlue"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBlue"
+        />
+
+    <ImageView
+        android:id="@+id/ImageViewBlueGreen"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="2dp"
+        android:elevation="20dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewBlueGreenNum"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewBlueGreenNum"
+        app:srcCompat="@drawable/green_rec"
+        />
+
+    <TextView
+        android:id="@+id/textViewBlueYellowNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:elevation="20dp"
+        android:text="1"
+        android:textColor="#CCDEF8"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/ImageViewBlueGreen"
+        app:layout_constraintBottom_toBottomOf="@+id/ImageViewBlueGreen"
+        />
+    <ImageView
+        android:id="@+id/ImageViewBlueYellow"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="2dp"
+        android:elevation="20dp"
+        android:padding="2.5dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewBlueYellowNum"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewBlueYellowNum"
+        app:srcCompat="@drawable/yellow_rec"
+        />
+    <TextView
+        android:id="@+id/textViewBlueRedNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:elevation="20dp"
+        android:text="0"
+        android:textColor="#CCDEF8"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/ImageViewBlueYellow"
+        app:layout_constraintBottom_toBottomOf="@+id/ImageViewBlueYellow"
+        />
+    <ImageView
+        android:id="@+id/ImageViewBlueRed"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="2dp"
+        android:elevation="20dp"
+        android:padding="2.5dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewBlueRedNum"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewBlueRedNum"
+        app:srcCompat="@drawable/red_rec"
+        />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="408dp"
+        android:layout_height="70dp"
+        android:theme="@style/Theme.MaterialComponents.DayNight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_menu" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

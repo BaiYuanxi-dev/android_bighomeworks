@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 自定义收起动画Button -->
+    <declare-styleable name="CustomAnimatorButton">
+        <!-- 圆角矩形的背景颜色 -->
+        <attr name="rect_back_color" format="color|reference" />
+        <!-- 圆角矩形背景的开始颜色 -->
+        <attr name="rect_back_start_color" format="color|reference" />
+        <!-- 圆角矩形背景的结束颜色 -->
+        <attr name="rect_back_end_color" format="color|reference" />
+        <!-- 渐变颜色的方向 -->
+        <attr name="color_direction" format="enum">
+            <!-- 纵向 -->
+            <enum name="vertical" value="1" />
+            <!-- 横向 -->
+            <enum name="horizontal" value="2" />
+        </attr>
+        <!-- 圆角矩形的弧度 -->
+        <attr name="rect_angle" format="dimension" />
+        <!-- 文字的颜色 -->
+        <attr name="text_color" format="color|reference" />
+        <!-- 按钮文字 -->
+        <attr name="btn_text" format="string" />
+        <!-- 按钮文字大小 -->
+        <attr name="btn_text_size" format="dimension" />
+        <!-- 动画执行时间 -->
+        <attr name="animator_duration" format="integer" />
+        <!-- 移动距离 -->
+        <attr name="move_distance" format="dimension" />
+        <!-- 图片资源 -->
+        <attr name="image_drawable" format="reference" />
+        <!-- 图片与文字的间距 -->
+        <attr name="image_padding" format="dimension" />
+
+        <!-- 底部标签文字颜色 -->
+        <attr name="tag_text_color" format="color|reference" />
+        <!-- 底部标签背景颜色 -->
+        <attr name="tag_back_color" format="color|reference" />
+        <!-- 底部标签背景弧度 -->
+        <attr name="tag_angle" format="dimension" />
+        <!-- 底部标签文字 -->
+        <attr name="tag_text" format="string"/>
+        <!-- 底部标签文字大小 -->
+        <attr name="tag_text_size" format="dimension"/>
+        <!-- 底部标签的宽度 -->
+        <attr name="tag_back_width" format="dimension" />
+        <!-- 底部标签的高度 -->
+        <attr name="tag_back_height" format="dimension" />
+
+    </declare-styleable>
+
+    <declare-styleable name="ProcessBar">
+        <attr format="reference" name="processbar_titles"/>
+        <attr format="integer" name="processbar_background"/>
+        <attr format="color" name="processbar_selected_color"/>
+        <attr format="integer" name="processbar_current_drawable"/>
+        <attr format="dimension" name="processbar_selected_text_size"/>
+        <attr format="dimension" name="processbar_unselected_text_size"/>
+    </declare-styleable>
+</resources>

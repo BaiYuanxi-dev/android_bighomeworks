@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:paddingTop="100dp"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/username_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+        <TextView
+            android:id="@+id/username_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户名称"
+            android:layout_alignParentLeft="true"
+            />
+        <EditText
+            android:layout_width="800px"
+            android:layout_height="100px"
+            android:background="@drawable/edit_bg"
+            android:layout_toRightOf="@+id/username_text"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/password_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username_layout"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+        <TextView
+            android:id="@+id/password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户密码"
+            android:layout_alignParentLeft="true"
+            />
+        <EditText
+            android:layout_width="800px"
+            android:layout_height="100px"
+            android:background="@drawable/edit_bg"
+            android:inputType="textPassword"
+            android:layout_toRightOf="@+id/password_text"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_layout"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+        <Button
+            android:id="@+id/close_but"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:layout_alignParentLeft="true"/>
+
+        <Button
+            android:layout_width="259dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/close_but"
+            android:text="登录" />
+    </RelativeLayout>
+</RelativeLayout>

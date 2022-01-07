@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+    <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/username_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        >
+        <TextView
+            android:id="@+id/username_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户名称"
+            />
+        <EditText
+            android:layout_width="800px"
+            android:layout_height="100px"
+            android:background="@drawable/edit_bg"
+            />
+    </TableRow>
+
+    <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/password_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+        <TextView
+            android:id="@+id/password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户密码"
+            />
+        <EditText
+            android:layout_width="800px"
+            android:layout_height="100px"
+            android:background="@drawable/edit_bg"
+            android:inputType="textPassword" />
+    </TableRow>
+
+
+    <TableRow
+        android:id="@+id/button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+        <Button
+            android:id="@+id/close_but"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="取消" />
+
+        <Button
+            android:layout_width="259dp"
+            android:layout_height="wrap_content"
+            android:text="登录" />
+    </TableRow>
+</TableLayout>
